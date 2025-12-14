@@ -2,11 +2,53 @@ import React from "react";
 
 export default async function ServicesDetails({ params }) {
   const { id } = await params;
-  console.log(id);
+
+  const data = [
+    {
+      _id: "1",
+      name: "Web Development",
+      image: "https://i.ibb.co/web-development.jpg",
+      description:
+        "Modern, responsive এবং high-performance ওয়েবসাইট তৈরি করা হয় React, Next.js ও আধুনিক টেকনোলজি ব্যবহার করে।",
+    },
+    {
+      _id: "2",
+      name: "UI/UX Design",
+      image: "https://i.ibb.co/ui-ux-design.jpg",
+      description:
+        "User-friendly এবং eye-catching ডিজাইন যা ইউজারের অভিজ্ঞতা আরও স্মুথ ও প্রফেশনাল করে তোলে।",
+    },
+    {
+      _id: "3",
+      name: "Backend Development",
+      image: "https://i.ibb.co/backend-development.jpg",
+      description:
+        "Secure এবং scalable backend system তৈরি করা হয় Node.js, Express ও ডাটাবেস ব্যবহার করে।",
+    },
+    {
+      _id: "4",
+      name: "API Integration",
+      image: "https://i.ibb.co/api-integration.jpg",
+      description:
+        "Third-party API এবং custom REST API integrate করে অ্যাপ্লিকেশনকে আরও পাওয়ারফুল করা হয়।",
+    },
+    {
+      _id: "5",
+      name: "Maintenance & Support",
+      image: "https://i.ibb.co/maintenance-support.jpg",
+      description:
+        "Website নিয়মিত আপডেট, bug fix এবং performance improvement এর জন্য নির্ভরযোগ্য সাপোর্ট।",
+    },
+  ];
+
+  const service = data.find((service) => service._id === id);
 
   return (
     <div>
-      <p>Services Details, ID: {id}</p>
+      <p>Services Details, ID: {service._id}</p>
+      <h1>{service.name}</h1>
+      <img src={service.image} alt={service.name} width={400} height={400} />
+      <p>{service.description}</p>
     </div>
   );
 }

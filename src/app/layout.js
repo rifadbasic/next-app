@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar/>
-        <main className="h-screen w-11/12 mx-auto place-items-center place-content-center">{children}</main>
+        <main className="h-screen w-11/12 mx-auto ">{children}</main>
         <footer> nextjs All rights reserved </footer>
       </body>
     </html>

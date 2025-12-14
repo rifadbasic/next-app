@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function AddressPage() {
+export default function RegisterPage() {
   return (
     <div>
-      address page
+      <h1>Register</h1>
     </div>
   )
 }
